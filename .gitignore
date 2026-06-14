@@ -1,5 +1,29 @@
-node_modules
-# Keep environment variables out of version control
-.env
+# Dependências do Node
+node_modules/
 
-/generated/prisma
+# Pastas de build do Next.js
+.next/
+out/
+build/
+
+# Logs de erro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variáveis de Ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Banco de Dados Local (SQLite)
+# É uma boa prática ignorar o arquivo do banco de dados para não subir arquivos binários no Git.
+# O avaliador vai rodar o comando de "seed" (que colocamos no README) e recriar o banco com os dados na máquina dele.
+/prisma/*.db
+/prisma/*.db-journal
+
+# Arquivos de sistema operacional (Mac/Windows)
+.DS_Store
+Thumbs.db
